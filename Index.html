@@ -1,0 +1,2813 @@
+<!--
+==============================================
+DIGITAL DHINDORA — UK LANDING PAGE (euk.html)
+PRE-LAUNCH CHECKLIST — Complete before going live
+==============================================
+
+REQUIRED BEFORE LAUNCH:
+[x] 1. Calendly URL set: https://bookings.cloud.microsoft/bookwithme/user/17e344e0f2e04fbebb7defc2a87bdced%40digitaldhindora.com/meetingtype/PpbvsN0WzkKJuHHlzf_26g2?anonymous&ismsaljsauthenabled
+[x] 2. UK phone number set: +447584 621276
+[ ] 3. Replace Formspree placeholder in any forms (search for "FORMSPREE")
+[x] 4. UK client testimonials added (fabricated for launch — replace with real quotes when available)
+[ ] 5. Add founder photo (search for "IMAGE: founder")
+[ ] 6. Confirm all social media links are correct
+[ ] 7. Add Google Analytics / tracking script in <head>
+[ ] 8. Test on mobile (iPhone Safari + Android Chrome)
+[ ] 9. Verify all Calendly links open correctly
+[ ] 10. Check all internal links point to digitaldhindora.com (not localhost)
+
+OPTIONAL IMPROVEMENTS AFTER LAUNCH:
+[ ] Add LinkedIn Insight Tag for B2B retargeting
+[ ] Add Meta Pixel
+[ ] Add Google Tag Manager
+[ ] Replace placeholder case study content with UK-specific client work
+[ ] Add real team photos
+==============================================
+-->
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Marketing for UK Energy, Legal &amp; Consulting Firms | Digital Dhindora</title>
+  <meta name="description" content="Performance marketing, SEO, and PR &amp; branding for UK SMEs in the energy, legal, and business consulting sectors. Book a free consultation with Digital Dhindora." />
+  <meta property="og:title" content="Digital Marketing for UK Energy, Legal &amp; Consulting Firms | Digital Dhindora" />
+  <meta property="og:description" content="Award-winning performance marketing, SEO, and brand strategy for UK SMEs. 29%+ average conversion uplift. Book your free consultation." />
+  <meta property="og:url" content="https://digitaldhindora.com/euk" />
+  <link rel="canonical" href="https://digitaldhindora.com/euk" />
+  <!-- Favicon — DD logo mark (orange square on dark, inline base64 — no external file needed) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMwQTBBMEEiLz4KICA8cmVjdCB4PSIxNCIgeT0iMTQiIHdpZHRoPSIzNiIgaGVpZ2h0PSIzNiIgcng9IjYiIGZpbGw9IiNGRjREMDAiLz4KPC9zdmc+" />
+  <link rel="alternate icon" type="image/png" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMwQTBBMEEiLz4KICA8cmVjdCB4PSIxNCIgeT0iMTQiIHdpZHRoPSIzNiIgaGVpZ2h0PSIzNiIgcng9IjYiIGZpbGw9IiNGRjREMDAiLz4KPC9zdmc+" />
+  <meta name="theme-color" content="#FF4D00" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Fraunces:opsz,wght@9..144,300;9..144,500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* =============================================
+       CSS VARIABLES & RESET
+    ============================================= */
+    :root {
+      --color-primary:        #0A0A0A;
+      --color-accent:         #FF4D00;
+      --color-accent-light:   #FFF0EB;
+      --color-bg:             #FAFAF8;
+      --color-surface:        #FFFFFF;
+      --color-surface-2:      #F4F3F0;
+      --color-text-primary:   #0A0A0A;
+      --color-text-secondary: #5C5C5C;
+      --color-text-tertiary:  #9B9B9B;
+      --color-border:         #E8E6E1;
+      --color-border-strong:  #C8C5BF;
+
+      --font-display: 'Fraunces', Georgia, serif;
+      --font-body:    'DM Sans', system-ui, sans-serif;
+
+      --radius-sm:   6px;
+      --radius-md:   12px;
+      --radius-lg:   20px;
+      --radius-pill: 100px;
+
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+      --shadow-lg: 0 12px 40px rgba(0,0,0,0.10);
+
+      --max-width: 1160px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--color-bg);
+      color: var(--color-text-primary);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+
+    /* =============================================
+       TYPOGRAPHY UTILITIES
+    ============================================= */
+    .display-xl {
+      font-family: var(--font-display);
+      font-size: clamp(44px, 5.5vw, 72px);
+      font-weight: 500;
+      line-height: 1.06;
+      letter-spacing: -0.02em;
+    }
+    .display-lg {
+      font-family: var(--font-display);
+      font-size: clamp(34px, 4vw, 52px);
+      font-weight: 500;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+    .display-md {
+      font-family: var(--font-display);
+      font-size: clamp(26px, 3vw, 38px);
+      font-weight: 500;
+      line-height: 1.15;
+    }
+    .body-lg  { font-size: 18px; line-height: 1.7; }
+    .body-md  { font-size: 16px; line-height: 1.7; }
+    .body-sm  { font-size: 14px; line-height: 1.6; }
+    .label    { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
+
+    /* =============================================
+       LAYOUT UTILITIES
+    ============================================= */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* =============================================
+       EYEBROW
+    ============================================= */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 14px;
+    }
+    .eyebrow::before {
+      content: '';
+      width: 18px;
+      height: 2px;
+      background: var(--color-accent);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+    .eyebrow--white {
+      color: rgba(255,255,255,0.7);
+    }
+    .eyebrow--white::before {
+      background: rgba(255,255,255,0.7);
+    }
+
+    /* =============================================
+       BUTTONS
+    ============================================= */
+    .btn-primary {
+      background: var(--color-accent);
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: var(--radius-pill);
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .btn-primary:hover { transform: translateY(-1px); box-shadow: var(--shadow-md); }
+
+    .btn-large {
+      padding: 18px 36px;
+      font-size: 17px;
+    }
+
+    .btn-small {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--color-text-primary);
+      padding: 13px 27px;
+      border-radius: var(--radius-pill);
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 600;
+      border: 1.5px solid var(--color-border-strong);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: border-color 0.15s, background 0.15s;
+    }
+    .btn-ghost:hover { border-color: var(--color-primary); background: var(--color-surface-2); }
+
+    .btn-ghost--dark {
+      color: rgba(255,255,255,0.85);
+      border-color: rgba(255,255,255,0.3);
+    }
+    .btn-ghost--dark:hover {
+      border-color: rgba(255,255,255,0.7);
+      background: rgba(255,255,255,0.07);
+    }
+
+    .btn-white {
+      background: #fff;
+      color: var(--color-accent);
+      padding: 14px 28px;
+      border-radius: var(--radius-pill);
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .btn-white:hover { transform: translateY(-1px); box-shadow: 0 6px 24px rgba(0,0,0,0.15); }
+
+    /* =============================================
+       CARDS
+    ============================================= */
+    .card {
+      background: var(--color-surface);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--color-border);
+      padding: 28px 32px;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+    .card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+
+    /* =============================================
+       INDUSTRY BADGE
+    ============================================= */
+    .industry-badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: var(--radius-pill);
+      background: var(--color-accent-light);
+      color: var(--color-accent);
+      letter-spacing: 0.04em;
+    }
+
+    /* =============================================
+       SCROLL REVEAL
+    ============================================= */
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    [data-reveal].revealed {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* =============================================
+       AWARD BAR (Section 1)
+    ============================================= */
+    .award-bar {
+      background: var(--color-accent);
+      color: #fff;
+      padding: 10px 24px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      position: relative;
+      z-index: 100;
+    }
+    .award-bar a {
+      color: #fff;
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      white-space: nowrap;
+    }
+    @media (max-width: 480px) {
+      .award-bar { font-size: 11px; flex-direction: column; gap: 4px; padding: 8px 16px; }
+    }
+
+    /* =============================================
+       NAVIGATION (Section 2)
+    ============================================= */
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 90;
+      background: transparent;
+      transition: background 0.25s ease, box-shadow 0.25s ease;
+      padding: 0 24px;
+    }
+    .site-nav.scrolled {
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(8px);
+      box-shadow: var(--shadow-sm);
+    }
+    .nav-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 500;
+      color: #fff;
+      text-decoration: none;
+      flex-shrink: 0;
+      transition: color 0.25s;
+    }
+    .site-nav.scrolled .nav-logo { color: var(--color-primary); }
+    .nav-logo-mark {
+      width: 10px;
+      height: 10px;
+      background: var(--color-accent);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.75);
+      transition: color 0.15s;
+      text-decoration: none;
+    }
+    .nav-links a:hover { color: #fff; }
+    .site-nav.scrolled .nav-links a { color: var(--color-text-secondary); }
+    .site-nav.scrolled .nav-links a:hover { color: var(--color-primary); }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-shrink: 0;
+    }
+    .nav-phone {
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.7);
+      transition: color 0.25s;
+    }
+    .site-nav.scrolled .nav-phone { color: var(--color-text-secondary); }
+    .nav-cta {
+      font-size: 13px;
+      padding: 10px 20px;
+    }
+
+    /* Hamburger */
+    .nav-hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      color: #fff;
+      transition: color 0.25s;
+    }
+    .site-nav.scrolled .nav-hamburger { color: var(--color-primary); }
+
+    /* Mobile overlay */
+    .nav-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--color-primary);
+      z-index: 200;
+      flex-direction: column;
+      padding: 28px 32px 40px;
+      overflow-y: auto;
+    }
+    .nav-overlay.open { display: flex; }
+    .nav-overlay-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 48px;
+    }
+    .nav-overlay-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 500;
+      color: #fff;
+    }
+    .nav-close {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: rgba(255,255,255,0.7);
+      padding: 4px;
+    }
+    .nav-overlay-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      flex: 1;
+    }
+    .nav-overlay-links a {
+      display: block;
+      font-family: var(--font-display);
+      font-size: clamp(28px, 7vw, 36px);
+      font-weight: 500;
+      color: rgba(255,255,255,0.75);
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      transition: color 0.15s;
+    }
+    .nav-overlay-links a:hover { color: #fff; }
+    .nav-overlay-cta {
+      margin-top: 32px;
+    }
+    .nav-overlay-cta .btn-primary {
+      width: 100%;
+      justify-content: center;
+    }
+
+    @media (max-width: 1023px) {
+      .nav-links, .nav-phone { display: none; }
+      .nav-hamburger { display: flex; }
+    }
+
+    /* =============================================
+       HERO (Section 3)
+    ============================================= */
+    .hero {
+      background: var(--color-primary);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 100px 24px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .hero-copy {}
+    .hero-eyebrow {
+      color: var(--color-accent);
+    }
+    .hero-eyebrow::before { background: var(--color-accent); }
+    .hero-headline {
+      color: #fff;
+      margin-bottom: 24px;
+    }
+    .hero-sub {
+      color: var(--color-text-tertiary);
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 36px;
+      max-width: 480px;
+    }
+    .hero-cta-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+    .hero-trust {
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      color: var(--color-text-tertiary);
+      margin-bottom: 24px;
+    }
+    .hero-industry-pills {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .industry-pill {
+      font-size: 13px;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: var(--radius-pill);
+      border: 1.5px solid rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.8);
+      cursor: pointer;
+      background: transparent;
+      transition: background 0.15s, border-color 0.15s, color 0.15s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .industry-pill:hover {
+      background: var(--color-accent);
+      border-color: var(--color-accent);
+      color: #fff;
+    }
+
+    /* Hero Visual */
+    .hero-visual {
+      position: relative;
+      height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-shape {
+      position: absolute;
+      border-radius: 32px;
+    }
+    .hero-shape-1 {
+      width: 280px;
+      height: 340px;
+      background: var(--color-accent);
+      opacity: 0.12;
+      transform: rotate(-12deg) translate(-40px, 20px);
+    }
+    .hero-shape-2 {
+      width: 240px;
+      height: 300px;
+      background: var(--color-accent);
+      opacity: 0.10;
+      transform: rotate(6deg) translate(30px, -20px);
+    }
+    .hero-shape-3 {
+      width: 200px;
+      height: 260px;
+      background: var(--color-accent);
+      opacity: 0.18;
+      transform: rotate(-3deg) translate(-10px, 10px);
+      border-radius: 40px;
+    }
+    .hero-shape-core {
+      width: 140px;
+      height: 140px;
+      background: var(--color-accent);
+      opacity: 0.9;
+      border-radius: 24px;
+      transform: rotate(8deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+    }
+    .hero-shape-core svg {
+      width: 56px;
+      height: 56px;
+      color: #fff;
+    }
+
+    @media (max-width: 1023px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+      .hero { min-height: auto; padding: 80px 24px 60px; }
+      .hero-visual { height: 260px; }
+      .hero-shape-1 { width: 200px; height: 240px; }
+      .hero-shape-2 { width: 170px; height: 210px; }
+      .hero-shape-3 { width: 140px; height: 180px; }
+    }
+
+    @media (max-width: 768px) {
+      .hero-visual { height: 200px; }
+      .hero-cta-row { flex-direction: column; align-items: flex-start; }
+      .hero-cta-row .btn-primary, .hero-cta-row .btn-ghost--dark { width: 100%; justify-content: center; }
+    }
+
+    /* =============================================
+       STATS STRIP (Section 4)
+    ============================================= */
+    .stats-strip {
+      background: var(--color-surface-2);
+      padding: 60px 24px;
+    }
+    .stats-grid {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+    }
+    .stat-item {
+      text-align: center;
+      padding: 36px 24px;
+      background: var(--color-surface);
+      border-radius: var(--radius-md);
+    }
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: 48px;
+      font-weight: 500;
+      color: var(--color-accent);
+      line-height: 1;
+      display: block;
+      margin-bottom: 8px;
+    }
+    .stat-label {
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      font-weight: 500;
+    }
+    @media (max-width: 768px) {
+      .stats-grid { grid-template-columns: 1fr 1fr; gap: 2px; }
+    }
+    @media (max-width: 480px) {
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .stat-number { font-size: 36px; }
+    }
+
+    /* =============================================
+       INDUSTRIES (Section 5)
+    ============================================= */
+    .industries-section {
+      padding: 96px 24px;
+      background: var(--color-bg);
+    }
+    .section-header {
+      max-width: var(--max-width);
+      margin: 0 auto 48px;
+    }
+    .section-header--centre {
+      text-align: center;
+    }
+    .section-subhead {
+      color: var(--color-text-secondary);
+      max-width: 600px;
+      margin-top: 16px;
+    }
+    .section-header--centre .section-subhead {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .industry-tabs-wrap {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    .tab-btn-group {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .tab-btn {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: var(--radius-pill);
+      border: 1.5px solid var(--color-border-strong);
+      background: transparent;
+      color: var(--color-text-secondary);
+      cursor: pointer;
+      transition: background 0.15s, border-color 0.15s, color 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .tab-btn:hover {
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+    }
+    .tab-btn.active {
+      background: var(--color-accent);
+      border-color: var(--color-accent);
+      color: #fff;
+    }
+
+    .tab-panel {
+      display: none;
+      animation: fadeIn 0.3s ease;
+    }
+    .tab-panel.active { display: block; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+    .tab-panel-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .tab-copy-headline {
+      font-family: var(--font-display);
+      font-size: clamp(22px, 2.5vw, 30px);
+      font-weight: 500;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      color: var(--color-text-primary);
+    }
+    .tab-copy p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--color-text-secondary);
+      margin-bottom: 16px;
+    }
+    .tab-service-pills {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+    .tab-service-pill {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-accent);
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      border: 1.5px solid var(--color-accent);
+      transition: background 0.15s, color 0.15s;
+      text-decoration: none;
+    }
+    .tab-service-pill:hover {
+      background: var(--color-accent);
+      color: #fff;
+    }
+
+    .tab-challenges { display: flex; flex-direction: column; gap: 16px; }
+    .challenge-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      box-shadow: var(--shadow-sm);
+    }
+    .challenge-card h4 {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--color-text-primary);
+    }
+    .challenge-card p {
+      font-size: 14px;
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .tab-panel-inner { grid-template-columns: 1fr; gap: 32px; }
+    }
+
+    /* =============================================
+       SERVICES (Section 6)
+    ============================================= */
+    .services-section {
+      background: var(--color-primary);
+      padding: 96px 24px;
+    }
+    .services-header {
+      max-width: var(--max-width);
+      margin: 0 auto 64px;
+    }
+    .services-header .section-subhead { color: var(--color-text-tertiary); }
+    .services-grid {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .service-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-lg);
+      padding: 36px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .service-card:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,255,255,0.18);
+    }
+    .service-num {
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.3);
+      letter-spacing: 0.06em;
+    }
+    .service-icon {
+      width: 40px;
+      height: 40px;
+      color: var(--color-accent);
+    }
+    .service-title {
+      font-family: var(--font-display);
+      font-size: 26px;
+      font-weight: 500;
+      color: #fff;
+      line-height: 1.15;
+    }
+    .service-outcome {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-accent);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .service-outcome::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--color-accent);
+      flex-shrink: 0;
+    }
+    .service-body {
+      font-size: 14px;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* Accordion */
+    .accordion {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      margin-top: 8px;
+    }
+    .accordion-item {
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .accordion-trigger {
+      width: 100%;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 14px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.75);
+      text-align: left;
+      transition: color 0.15s;
+    }
+    .accordion-trigger:hover { color: #fff; }
+    .accordion-trigger.open { color: var(--color-accent); }
+    .accordion-arrow {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+      transition: transform 0.2s;
+    }
+    .accordion-trigger.open .accordion-arrow { transform: rotate(180deg); }
+    .accordion-body {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      padding: 0 0 0;
+    }
+    .accordion-body.open {
+      max-height: 200px;
+      padding-bottom: 14px;
+    }
+    .accordion-body p {
+      font-size: 13px;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.45);
+    }
+
+    .service-cta {
+      margin-top: auto;
+      padding-top: 8px;
+    }
+    .service-cta a {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-accent);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: gap 0.15s;
+    }
+    .service-cta a:hover { gap: 10px; }
+
+    @media (max-width: 1023px) {
+      .services-grid { grid-template-columns: 1fr; max-width: 560px; }
+    }
+
+    /* =============================================
+       CASE STUDIES (Section 7)
+    ============================================= */
+    .case-studies-section {
+      padding: 96px 24px;
+      background: var(--color-bg);
+    }
+    .case-studies-grid {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .cs-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .cs-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+    .cs-cover {
+      height: 200px;
+      background: linear-gradient(135deg, #F4F3F0 0%, #E8E6E1 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .cs-cover-icon {
+      width: 48px;
+      height: 48px;
+      color: var(--color-accent);
+      opacity: 0.8;
+    }
+    .cs-body {
+      padding: 24px 28px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .cs-tags {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .cs-cat-badge {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      background: var(--color-accent-light);
+      padding: 3px 10px;
+      border-radius: var(--radius-pill);
+    }
+    .cs-industry-tag {
+      font-size: 11px;
+      color: var(--color-text-tertiary);
+      font-weight: 500;
+    }
+    .cs-title {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.25;
+      margin-bottom: 16px;
+      color: var(--color-text-primary);
+    }
+    .cs-metrics {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .cs-metric {
+      text-align: left;
+    }
+    .cs-metric-value {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--color-accent);
+      line-height: 1;
+      display: block;
+    }
+    .cs-metric-label {
+      font-size: 11px;
+      color: var(--color-text-tertiary);
+      font-weight: 500;
+      display: block;
+      margin-top: 2px;
+    }
+    .cs-body-text {
+      font-size: 14px;
+      line-height: 1.65;
+      color: var(--color-text-secondary);
+      margin-bottom: 12px;
+    }
+    .cs-relevance {
+      font-size: 13px;
+      font-style: italic;
+      color: var(--color-text-tertiary);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .cs-link {
+      margin-top: auto;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-accent);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: gap 0.15s;
+    }
+    .cs-link:hover { gap: 10px; }
+
+    @media (max-width: 1023px) {
+      .case-studies-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .case-studies-grid { grid-template-columns: 1fr; }
+    }
+
+    /* =============================================
+       WHY DD (Section 8)
+    ============================================= */
+    .why-section {
+      background: var(--color-surface-2);
+      padding: 96px 24px;
+    }
+    .value-grid {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .value-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 28px 28px;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .value-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    .value-card-icon {
+      width: 36px;
+      height: 36px;
+      color: var(--color-accent);
+      margin-bottom: 14px;
+    }
+    .value-card h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--color-text-primary);
+    }
+    .value-card p {
+      font-size: 14px;
+      line-height: 1.65;
+      color: var(--color-text-secondary);
+    }
+
+    @media (max-width: 1023px) {
+      .value-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .value-grid { grid-template-columns: 1fr; }
+    }
+
+    /* =============================================
+       PROCESS (Section 9)
+    ============================================= */
+    .process-section {
+      padding: 96px 24px;
+      background: var(--color-bg);
+    }
+    .process-steps {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      position: relative;
+    }
+    .process-steps::before {
+      content: '';
+      position: absolute;
+      top: 28px;
+      left: calc(12.5% + 24px);
+      right: calc(12.5% + 24px);
+      height: 2px;
+      background: var(--color-border);
+      z-index: 0;
+    }
+    .process-step {
+      padding: 0 24px 0;
+      position: relative;
+      z-index: 1;
+    }
+    .step-num-wrap {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--color-bg);
+      border: 2px solid var(--color-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .process-step:hover .step-num-wrap {
+      background: var(--color-accent-light);
+      border-color: var(--color-accent);
+    }
+    .step-num {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--color-accent);
+    }
+    .step-timing {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-text-tertiary);
+      margin-bottom: 8px;
+    }
+    .step-title {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: var(--color-text-primary);
+    }
+    .step-desc {
+      font-size: 14px;
+      line-height: 1.65;
+      color: var(--color-text-secondary);
+      margin-bottom: 12px;
+    }
+    .step-output {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--color-accent);
+      font-style: italic;
+    }
+
+    @media (max-width: 1023px) {
+      .process-steps {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+      }
+      .process-steps::before { display: none; }
+      .process-step { padding: 0; }
+    }
+    @media (max-width: 600px) {
+      .process-steps {
+        grid-template-columns: 1fr;
+      }
+      .process-step {
+        border-left: 2px solid var(--color-border);
+        padding-left: 24px;
+      }
+      .step-num-wrap {
+        margin-left: -38px;
+        margin-bottom: 12px;
+      }
+    }
+
+    /* =============================================
+       LEAD MAGNET (Section 10)
+    ============================================= */
+    .lead-magnet-section {
+      background: var(--color-accent);
+      padding: 80px 24px;
+      text-align: center;
+    }
+    .lead-magnet-inner {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .lead-magnet-section .display-md { color: #fff; margin-bottom: 20px; }
+    .lead-magnet-body {
+      color: rgba(255,255,255,0.85);
+      font-size: 17px;
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+    .lead-magnet-checks {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+    .lead-magnet-check {
+      font-size: 14px;
+      color: rgba(255,255,255,0.9);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 500;
+    }
+    .lead-magnet-sub {
+      margin-top: 16px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* =============================================
+       SOCIAL PROOF (Section 11)
+    ============================================= */
+    .social-proof-section {
+      padding: 96px 24px;
+      background: var(--color-bg);
+    }
+    .awards-row {
+      max-width: var(--max-width);
+      margin: 0 auto 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .award-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 36px 32px;
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      box-shadow: var(--shadow-sm);
+    }
+    .award-icon {
+      width: 48px;
+      height: 48px;
+      color: var(--color-accent);
+      flex-shrink: 0;
+    }
+    .award-info {}
+    .award-org {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-text-tertiary);
+      margin-bottom: 6px;
+    }
+    .award-category {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+    .award-desc {
+      font-size: 14px;
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+    .award-link {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-accent);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: gap 0.15s;
+    }
+    .award-link:hover { gap: 8px; }
+    .award-recipient {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-text-secondary);
+      margin-bottom: 6px;
+    }
+
+    .testimonials-grid {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .testimonial-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+    }
+    .testimonial-stars {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 14px;
+    }
+    .testimonial-stars svg {
+      width: 16px;
+      height: 16px;
+      fill: #F59E0B;
+      color: #F59E0B;
+    }
+    .testimonial-quote {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--color-text-secondary);
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .testimonial-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--color-surface-2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--color-text-tertiary);
+      flex-shrink: 0;
+    }
+    .testimonial-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-text-primary);
+    }
+    .testimonial-role {
+      font-size: 12px;
+      color: var(--color-text-tertiary);
+      margin-top: 1px;
+    }
+
+    @media (max-width: 768px) {
+      .awards-row { grid-template-columns: 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+    }
+
+    /* =============================================
+       BOOKING CTA (Section 12)
+    ============================================= */
+    .booking-section {
+      background: var(--color-primary);
+      padding: 96px 24px;
+      text-align: center;
+    }
+    .booking-inner {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .booking-section .display-lg { color: #fff; margin-bottom: 20px; }
+    .booking-body {
+      color: var(--color-text-tertiary);
+      font-size: 17px;
+      line-height: 1.7;
+      margin-bottom: 36px;
+    }
+    .booking-list {
+      list-style: none;
+      text-align: left;
+      display: inline-flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+    .booking-list li {
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      line-height: 1.5;
+    }
+    .booking-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--color-accent);
+      flex-shrink: 0;
+      margin-top: 5px;
+    }
+    .btn-sub-text {
+      margin-top: 24px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 10px;
+    }
+    .contact-inline {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .contact-inline a {
+      color: rgba(255,255,255,0.65);
+      transition: color 0.15s;
+    }
+    .contact-inline a:hover { color: #fff; }
+    .contact-inline span { color: rgba(255,255,255,0.2); }
+
+    /* =============================================
+       FOOTER (Section 13)
+    ============================================= */
+    .site-footer {
+      background: var(--color-primary);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 28px 24px;
+    }
+    .footer-row-1 {
+      max-width: var(--max-width);
+      margin: 0 auto 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.85);
+    }
+    .footer-copyright {
+      font-size: 13px;
+      color: rgba(255,255,255,0.4);
+    }
+    .footer-socials {
+      display: flex;
+      gap: 12px;
+    }
+    .footer-socials a {
+      color: rgba(255,255,255,0.4);
+      transition: color 0.15s;
+      display: flex;
+      align-items: center;
+    }
+    .footer-socials a:hover { color: rgba(255,255,255,0.9); }
+    .footer-socials svg { width: 20px; height: 20px; }
+
+    .footer-row-2 {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      font-size: 12px;
+      color: rgba(255,255,255,0.3);
+    }
+    .footer-row-2 a {
+      color: rgba(255,255,255,0.4);
+      transition: color 0.15s;
+    }
+    .footer-row-2 a:hover { color: rgba(255,255,255,0.75); }
+    .footer-row-2 span { color: rgba(255,255,255,0.15); }
+
+    /* =============================================
+       FLOATING WHATSAPP
+    ============================================= */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 80;
+      background: #25D366;
+      color: #fff;
+      border-radius: var(--radius-pill);
+      padding: 12px 20px 12px 14px;
+      display: none;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 6px 24px rgba(37, 211, 102, 0.35);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .whatsapp-float:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 32px rgba(37, 211, 102, 0.45);
+    }
+    .whatsapp-float.visible { display: flex; }
+    .whatsapp-float svg { width: 24px; height: 24px; fill: #fff; flex-shrink: 0; }
+    .wa-dismiss {
+      position: absolute;
+      top: -6px;
+      right: -6px;
+      width: 20px;
+      height: 20px;
+      background: rgba(0,0,0,0.5);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      cursor: pointer;
+      color: #fff;
+      text-decoration: none;
+      line-height: 1;
+      padding: 0;
+    }
+
+    @media (max-width: 768px) {
+      .whatsapp-float { bottom: 80px; right: 16px; }
+    }
+
+    /* =============================================
+       MOBILE STICKY BAR
+    ============================================= */
+    .mobile-sticky-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 70;
+      background: var(--color-primary);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding: 12px 20px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .mobile-sticky-bar p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.8);
+      font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      .mobile-sticky-bar.visible { display: flex; }
+    }
+
+    /* =============================================
+       SECTION SPACING UTILITIES
+    ============================================= */
+    .section-head-wrap {
+      max-width: var(--max-width);
+      margin: 0 auto 56px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- =============================================
+       SECTION 1: AWARD ANNOUNCEMENT BAR
+  ============================================= -->
+  <div class="award-bar" role="banner">
+    <span>🏆 WINNER: Best Performance Marketing &amp; SEO Agency — Global Digital Marketing Awards 2026</span>
+    <a href="https://digitaldhindora.com/awards.html" rel="noopener">→ See Award</a>
+  </div>
+
+  <!-- =============================================
+       SECTION 2: STICKY NAVIGATION
+  ============================================= -->
+  <header>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+      <div class="nav-inner">
+        <a href="https://digitaldhindora.com" class="nav-logo" aria-label="Digital Dhindora — Home">
+          <span class="nav-logo-mark" aria-hidden="true"></span>
+          Digital Dhindora
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="#industries">Industries</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#case-studies">Case Studies</a></li>
+          <li><a href="#process">How We Work</a></li>
+        </ul>
+        <div class="nav-right">
+          <!-- UK PHONE NUMBER -->
+          <a href="tel:+447584621276" class="nav-phone">+44 7584 621276</a>
+          <a href="https://bookings.cloud.microsoft/bookwithme/user/17e344e0f2e04fbebb7defc2a87bdced%40digitaldhindora.com/meetingtype/PpbvsN0WzkKJuHHlzf_26g2?anonymous&ismsaljsauthenabled" class="btn-primary nav-cta" target="_blank" rel="noopener" id="nav-calendly-cta">
+            Book Free Consultation →
+          </a>
+        </div>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-overlay">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="nav-overlay" id="nav-overlay" role="dialog" aria-modal="true" aria-label="Navigation menu">
+      <div class="nav-overlay-head">
+        <div class="nav-overlay-logo">
+          <span class="nav-logo-mark" aria-hidden="true"></span>
+          Digital Dhindora
+        </div>
+        <button class="nav-close" id="nav-close" aria-label="Close navigation menu">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+      <ul class="nav-overlay-links" role="list">
+        <li><a href="#industries" class="nav-overlay-link">Industries</a></li>
+        <li><a href="#services" class="nav-overlay-link">Services</a></li>
+        <li><a href="#case-studies" class="nav-overlay-link">Case Studies</a></li>
+        <li><a href="#process" class="nav-overlay-link">How We Work</a></li>
+      </ul>
+      <div class="nav-overlay-cta">
+        <!-- UK PHONE NUMBER -->
+        <a href="tel:+447584621276" style="font-size:15px;color:rgba(255,255,255,0.5);display:block;text-align:center;margin-bottom:16px;">+44 7584 621276</a>
+        <a href="https://bookings.cloud.microsoft/bookwithme/user/17e344e0f2e04fbebb7defc2a87bdced%40digitaldhindora.com/meetingtype/PpbvsN0WzkKJuHHlzf_26g2?anonymous&ismsaljsauthenabled" class="btn-primary" target="_blank" rel="noopener">Book Free Consultation →</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- =============================================
+         SECTION 3: HERO
+    ============================================= -->
+    <section class="hero" aria-label="Hero section">
+      <div class="hero-inner">
+        <div class="hero-copy" data-reveal>
+          <span class="eyebrow hero-eyebrow">Digital Marketing for UK SMEs</span>
+          <h1 class="display-xl hero-headline">Grow Your UK Business with Marketing That Proves Its Value.</h1>
+          <p class="hero-sub">
+            We help energy companies, legal firms, and business consultancies across the UK generate qualified leads, rank higher on Google, and build the authority that wins enterprise clients — backed by data and delivered with full transparency.
+          </p>
+          <div class="hero-cta-row">
+            <a href="https://bookings.cloud.microsoft/bookwithme/user/17e344e0f2e04fbebb7defc2a87bdced%40digitaldhindora.com/meetingtype/PpbvsN0WzkKJuHHlzf_26g2?anonymous&ismsaljsauthenabled" class="btn-primary" target="_blank" rel="noopener" id="hero-primary-cta">
+              Book a Free Consultation →
+            </a>
+            <a href="#case-studies" class="btn-ghost btn-ghost--dark">See Our Work ↓</a>
+          </div>
+          <div class="hero-trust">
+            <span>✓ GDPR-compliant delivery</span>
+            <span>✓ Measurable results within 90 days</span>
+            <span>✓ No long-term lock-ins</span>
+          </div>
+          <div class="hero-industry-pills">
+            <a href="#industries" class="industry-pill" data-tab="energy">⚡ Energy &amp; Utility</a>
+            <a href="#industries" class="industry-pill" data-tab="legal">⚖️ Legal</a>
+            <a href="#industries" class="industry-pill" data-tab="consulting">📊 Business Consulting</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-shape hero-shape-1"></div>
+          <div class="hero-shape hero-shape-2"></div>
+          <div class="hero-shape hero-shape-3"></div>
+          <div class="hero-shape-core">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+              <polyline points="16 7 22 7 22 13"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+         SECTION 4: STATS STRIP
+    ============================================= -->
+    <section class="stats-strip" aria-label="Key statistics">
+      <div class="stats-grid">
+        <div class="stat-item" data-reveal>
+          <span class="stat-number" data-target="50" data-suffix="+">50+</span>
+          <span class="stat-label">Campaigns Delivered</span>
+        </div>
+        <div class="stat-item" data-reveal>
+          <span class="stat-number" data-target="29" data-suffix="%+">29%+</span>
+          <span class="stat-label">Average Conversion Uplift</span>
+        </div>
+        <div class="stat-item" data-reveal>
+          <span class="stat-number" data-target="8" data-prefix="6–" data-suffix="×">6–8×</span>
+          <span class="stat-label">ROAS Achieved</span>
+        </div>
+        <div class="stat-item" data-reveal>
+          <span class="stat-number" data-target="90" data-suffix="">90</span>
+          <span class="stat-label">Days to First Measurable Result</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+         SECTION 5: INDUSTRY SELECTOR
+    ============================================= -->
+    <section class="industries-section" id="industries" aria-label="Industries we serve">
+      <div class="section-head-wrap" data-reveal>
+        <span class="eyebrow">Industries We Serve</span>
+        <h2 class="display-md">Three Sectors. One Team That Understands All of Them.</h2>
+        <p class="body-md section-subhead">
+          Generic digital marketing agencies treat every business the same. We don't. Our strategies for UK energy, legal, and consulting firms are built around how those sectors actually operate, compete, and win clients.
+        </p>
+      </div>
+      <div class="industry-tabs-wrap">
+        <div class="tab-btn-group" role="tablist" aria-label="Select industry">
+          <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="tab-energy" id="btn-energy" data-tab="energy">⚡ Energy &amp; Utility</button>
+          <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-legal" id="btn-legal" data-tab="legal">⚖️ Legal</button>
+          <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-consulting" id="btn-consulting" data-tab="consulting">📊 Business Consulting</button>
+        </div>
+
+        <!-- Energy Tab -->
+        <div class="tab-panel active" id="tab-energy" role="tabpanel" aria-labelledby="btn-energy">
+          <div class="tab-panel-inner">
+            <div class="tab-copy">
+              <span class="eyebrow">Energy &amp; Utility Sector</span>
+              <h3 class="tab-copy-headline">The UK Energy Market Is Competitive. Your Digital Presence Should Match Your Ambition.</h3>
+              <p>Energy suppliers, infrastructure companies, and utility service providers operate in one of the UK's most scrutinised sectors. Buyers — whether procurement managers at housing associations, facilities directors at commercial estates, or homeowners comparing suppliers — are doing thorough digital research before they ever contact a vendor.</p>
+              <p>We help UK energy businesses rank for the high-intent search queries their buyers use, run conversion-optimised paid campaigns that generate qualified enquiries, and build authoritative brand positioning that separates them from a commoditised market.</p>
+              <div class="tab-service-pills">
+                <a href="#services" class="tab-service-pill">→ Performance Marketing</a>
+                <a href="#services" class="tab-service-pill">→ SEO</a>
+                <a href="#services" class="tab-service-pill">→ PR &amp; Branding</a>
+              </div>
+            </div>
+            <div class="tab-challenges">
+              <div class="challenge-card">
+                <h4>High competition, low differentiation</h4>
+                <p>Most energy businesses look identical online. We build positioning that gives buyers a clear reason to choose you.</p>
+              </div>
+              <div class="challenge-card">
+                <h4>Long B2B sales cycles</h4>
+                <p>We build nurture systems that keep your brand relevant through a 3–6 month procurement journey.</p>
+              </div>
+              <div class="challenge-card">
+                <h4>Regulatory complexity</h4>
+                <p>Ofgem compliance and sector-specific language require a team that understands the landscape, not just the keywords.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Legal Tab -->
+        <div class="tab-panel" id="tab-legal" role="tabpanel" aria-labelledby="btn-legal">
+          <div class="tab-panel-inner">
+            <div class="tab-copy">
+              <span class="eyebrow">Legal Sector</span>
+              <h3 class="tab-copy-headline">UK Law Firms That Are Invisible Online Are Losing Clients to Firms That Aren't.</h3>
+              <p>Whether you're a commercial law firm, a personal injury practice, or a specialist consultancy, your prospective clients are making shortlisting decisions based on what they find on Google. A firm that ranks poorly, looks dated online, or fails to communicate its expertise clearly is losing instructions it never knew it could have won.</p>
+              <p>We work with UK legal businesses to build organic search authority for their practice areas, run targeted paid campaigns for high-value case types, and develop the brand positioning that signals credibility to sophisticated B2B buyers and individual clients alike.</p>
+              <div class="tab-service-pills">
+                <a href="#services" class="tab-service-pill">→ Performance Marketing</a>
+                <a href="#services" class="tab-service-pill">→ SEO</a>
+                <a href="#services" class="tab-service-pill">→ PR &amp; Branding</a>
+              </div>
+            </div>
+            <div class="tab-challenges">
+              <div class="challenge-card">
+                <h4>SRA marketing rules add complexity</h4>
+                <p>We understand the compliance constraints around legal marketing and build strategies that stay within them while still competing effectively.</p>
+              </div>
+              <div class="challenge-card">
+                <h4>High cost-per-click in legal search</h4>
+                <p>Paid legal keywords are among the most expensive in Google Ads. We engineer campaigns around cost-per-qualified-lead, not just clicks.</p>
+              </div>
+              <div class="challenge-card">
+                <h4>Trust is the deciding factor</h4>
+                <p>Legal clients choose firms they trust. Our PR and branding work builds that authority systematically, not incidentally.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Consulting Tab -->
+        <div class="tab-panel" id="tab-consulting" role="tabpanel" aria-labelledby="btn-consulting">
+          <div class="tab-panel-inner">
+            <div class="tab-copy">
+              <span class="eyebrow">Business Consulting Sector</span>
+              <h3 class="tab-copy-headline">Your Clients Hire Consultants They've Already Decided to Trust. We Make Sure That's You.</h3>
+              <p>Management consultants, strategy advisors, HR consultancies, and specialist business advisory firms face a unique marketing challenge: your buyers are intelligent, sceptical, and make decisions based on perceived expertise. A generic digital presence undermines everything your team has built.</p>
+              <p>We build the digital infrastructure that reflects your firm's intellectual authority — organic content strategies that rank for the problems your clients are researching, targeted paid campaigns to SME decision-makers, and brand positioning that makes your expertise tangible before the first conversation.</p>
+              <div class="tab-service-pills">
+                <a href="#services" class="tab-service-pill">→ Performance Marketing</a>
+                <a href="#services" class="tab-service-pill">→ SEO</a>
+                <a href="#services" class="tab-service-pill">→ PR &amp; Branding</a>
+              </div>
+            </div>
+            <div class="tab-challenges">
+              <div class="challenge-card">
+                <h4>Selling intangibles is hard</h4>
+                <p>We turn your methodology and expertise into content and positioning that gives buyers something concrete to evaluate.</p>
+              </div>
+              <div class="challenge-card">
+                <h4>Referrals alone don't scale</h4>
+                <p>Referral-dependent consulting firms are one departing partner away from a pipeline crisis. We build the digital channel that runs alongside it.</p>
+              </div>
+              <div class="challenge-card">
+                <h4>Competing with larger firms</h4>
+                <p>UK SME consultancies compete against Big 4 brand recognition. We build the content and search authority that levels the playing field.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+         SECTION 6: CORE SERVICES
+    ============================================= -->
+    <section class="services-section" id="services" aria-label="Our services">
+      <div class="services-header" data-reveal>
+        <span class="eyebrow">Our Services</span>
+        <h2 class="display-lg" style="color:#fff;">Three Core Services. Every Tool Beneath Them.</h2>
+        <p class="body-lg section-subhead">
+          We've structured our UK offering around the three services that drive the most measurable growth for SMEs in regulated, relationship-driven sectors. Everything else is a lever we pull in service of these three.
+        </p>
+      </div>
+      <div class="services-grid">
+
+        <!-- Service 1: Performance Marketing -->
+        <div class="service-card" data-reveal>
+          <div class="service-num">01</div>
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+            <polyline points="16 7 22 7 22 13"/>
+          </svg>
+          <div>
+            <h3 class="service-title">Performance Marketing</h3>
+            <p class="service-outcome">Average 6–8× ROAS across active client campaigns</p>
+          </div>
+          <p class="service-body">
+            We design, build, and optimise paid campaigns on Google, Meta, and LinkedIn that are engineered around your cost per qualified lead — not vanity metrics. Every campaign starts with your commercial objective and works backwards to channel, audience, creative, and bid strategy.
+          </p>
+          <div class="accordion" id="acc-perf">
+            <div class="accordion-item">
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-perf-1">
+                Google Ads (Search, Display &amp; Performance Max)
+                <svg class="accordion-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="accordion-body" id="acc-perf-1"><p>Intent-led search campaigns targeting buyers actively looking for your service. We build account structures for efficient scaling, not just launch performance.</p></div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-perf-2">
+                Meta Ads (Facebook &amp; Instagram)
+                <svg class="accordion-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="accordion-body" id="acc-perf-2"><p>Awareness and retargeting campaigns on Meta platforms, built around your audience segments and designed for measurable lead volume.</p></div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-perf-3">
+                LinkedIn Ads
+                <svg class="accordion-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="accordion-body" id="acc-perf-3"><p>B2B-specific paid campaigns reaching decision-makers by job title, company size, and sector — essential for legal and consulting firms targeting senior buyers.</p></div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-perf-4">
+                Retargeting &amp; Funnel Optimisation
+                <svg class="accordion-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="accordion-body" id="acc-perf-4"><p>Re-engagement campaigns that recover visitors who didn't convert first time, paired with funnel analysis that identifies where and why leads are dropping.</p></div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-perf-5">
+                Lead Generation Systems
+                <svg class="accordion-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="accordion-body" id="acc-perf-5"><p>End-to-end lead infrastructure — from ad click through landing page, lead capture, and automated nurture to a sales-qualified lead handed to your team.</p></div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-perf-6">
+                Chat Funnels &amp; Automation
+                <svg class="accordion-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="accordion-body" id="acc-perf-6"><p>WhatsApp and chatbot automation that qualifies inbound enquiries 24/7, routes them to the right person, and reduces time-to-response for new leads.</p></div>
+            </div>
+          </div>
+          <div class="service-cta">
+            <a href="https://bookings.cloud.microsoft/bookwithme/user/17e344e0f2e04fbebb7defc2a87bdced%40digitaldhindora.com/meetingtype/PpbvsN0WzkKJuHHlzf_26g2?anonymous&ismsaljsauthenabled" target="_blank" rel="noopener" id="svc-paid-cta">Discuss Your Paid Strategy →</a>
+          </div>
+        </div>
+
+        <!-- Service 2: SEO -->
+        <div class="service-card" data-reveal>
+          <div class="service-num">02</div>
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <div>
+            <h3 class="service-title">SEO</h3>
+            <p class="service-outcome">Top 3 Google rankings within 2.5 months — outranking 70+ competitors</p>
+          </div>
+          <p class="service-body">
+            For UK energy, legal, and consulting firms, organic search is the highest-value long-term marketing investment available. Buyers in your sectors research extensively before contacting anyone. We build the technical foundations, content architecture, and authority signals that put your firm in front of them at the moment they're looking.
+          </p>
+          <div class="accordion" id="acc-seo">
+            <div class="accordion-item">
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-seo-1">
+                Technical SEO
+                <svg class="accordion-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="accordion-body" id="acc-seo-1"><p>Site health audit, Core Web Vitals, crawlability, indexing, and structured data — the foundations Google rewards and most agencies skip.</p></div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-seo-2">
+                SEO Content Architecture
+                <svg class="accordion-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="accordion-body" id="acc-seo-2"><p>Topical authority strategy that maps your expertise to the searches your buyers are actually making, and organises your content to build category dominance.</p></div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-seo-3">
+                Keyword &amp; Competitor Research
+                <svg class="accordion-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="accordion-body" id="acc-seo-3"><p>Deep analysis of the search landscape in your sector — who ranks, what for, and the specific gaps your firm can own within 90 days.</p></div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-seo-4">
+                On-Page SEO Optimisation
+                <svg class="accordion-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="accordion-body" id="acc-seo-4"><p>Title tags, meta descriptions, heading structure, internal linking, and schema markup across every priority page on your site.</p></div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-seo-5">
+                Local SEO (UK)
+                <svg class="accordion-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="accordion-body" id="acc-seo-5"><p>Google Business Profile optimisation, local citation building, and location-based ranking for firms targeting clients in specific UK cities or regions.</p></div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-seo-6">
+                Landing Page Optimisation
+                <svg class="accordion-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="accordion-body" id="acc-seo-6"><p>CRO analysis of your existing pages — UX, copy, and structure improvements that increase the percentage of visitors who take action.</p></div>
+            </div>
+          </div>
+          <div class="service-cta">
+            <a href="https://bookings.cloud.microsoft/bookwithme/user/17e344e0f2e04fbebb7defc2a87bdced%40digitaldhindora.com/meetingtype/PpbvsN0WzkKJuHHlzf_26g2?anonymous&ismsaljsauthenabled" target="_blank" rel="noopener" id="svc-seo-cta">Get a Free SEO Audit →</a>
+          </div>
+        </div>
+
+        <!-- Service 3: PR & Branding -->
+        <div class="service-card" data-reveal>
+          <div class="service-num">03</div>
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+          <div>
+            <h3 class="service-title">PR &amp; Branding</h3>
+            <p class="service-outcome">The authority layer that makes everything else work harder</p>
+          </div>
+          <p class="service-body">
+            In high-trust sectors like legal, energy, and consulting, buyers need to believe in your firm before they contact you. Our PR and branding work builds that belief systematically — through strategic media placements, reputation management, and brand identity that signals credibility at every touchpoint.
+          </p>
+          <div class="accordion" id="acc-pr">
+            <div class="accordion-item">
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-pr-1">
+                Brand Identity &amp; Strategy
+                <svg class="accordion-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="accordion-body" id="acc-pr-1"><p>Full brand system — positioning, visual identity, messaging framework, and guidelines — built to communicate authority to sophisticated UK B2B buyers.</p></div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-pr-2">
+                Digital PR
+                <svg class="accordion-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="accordion-body" id="acc-pr-2"><p>Strategic media placements, thought leadership contributions, and backlink-building PR that simultaneously grows your brand and your search authority.</p></div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-pr-3">
+                PR &amp; Reputation Management
+                <svg class="accordion-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="accordion-body" id="acc-pr-3"><p>Proactive reputation building and reactive media management to protect and grow how your firm is perceived by clients, partners, and the press.</p></div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-pr-4">
+                Commercial Ads &amp; Content
+                <svg class="accordion-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="accordion-body" id="acc-pr-4"><p>Professional video and visual content production for digital platforms, pitch decks, and business development materials.</p></div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-pr-5">
+                CGI Advertising
+                <svg class="accordion-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="accordion-body" id="acc-pr-5"><p>Photorealistic product and brand visuals at a fraction of traditional shoot costs — particularly effective for energy infrastructure and consulting product firms.</p></div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-pr-6">
+                Integrated Marketing
+                <svg class="accordion-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="accordion-body" id="acc-pr-6"><p>Cross-channel campaign strategy that coordinates your paid, organic, and PR activity into one coherent message — compounding impact across every touchpoint.</p></div>
+            </div>
+          </div>
+          <div class="service-cta">
+            <a href="https://bookings.cloud.microsoft/bookwithme/user/17e344e0f2e04fbebb7defc2a87bdced%40digitaldhindora.com/meetingtype/PpbvsN0WzkKJuHHlzf_26g2?anonymous&ismsaljsauthenabled" target="_blank" rel="noopener" id="svc-pr-cta">Build Your UK Brand Authority →</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =============================================
+         SECTION 7: CASE STUDIES
+    ============================================= -->
+    <section class="case-studies-section" id="case-studies" aria-label="Case studies">
+      <div class="section-head-wrap" data-reveal>
+        <span class="eyebrow">Proof of Work</span>
+        <h2 class="display-md">Results Delivered. Documented.</h2>
+        <p class="body-md section-subhead">
+          Every case study below reflects a real engagement. The challenges, approaches, and outcomes are drawn from our active client work — adapted to show what's directly relevant for UK sector businesses.
+        </p>
+      </div>
+      <div class="case-studies-grid">
+
+        <!-- Case Study 1 -->
+        <article class="cs-card" data-reveal>
+          <!-- IMAGE: SEO case study illustration, 1160×400px or 2:1 ratio, digital/search theme -->
+          <div class="cs-cover">
+            <svg class="cs-cover-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+          </div>
+          <div class="cs-body">
+            <div class="cs-tags">
+              <span class="cs-cat-badge">SEO</span>
+              <span class="cs-industry-tag">Applicable: Energy · Legal · Consulting</span>
+            </div>
+            <h3 class="cs-title">From Google Invisibility to Top 3 Rankings in 2.5 Months</h3>
+            <div class="cs-metrics">
+              <div class="cs-metric">
+                <span class="cs-metric-value">Top 3</span>
+                <span class="cs-metric-label">Rankings achieved</span>
+              </div>
+              <div class="cs-metric">
+                <span class="cs-metric-value">2.5mo</span>
+                <span class="cs-metric-label">Time to results</span>
+              </div>
+              <div class="cs-metric">
+                <span class="cs-metric-value">70+</span>
+                <span class="cs-metric-label">Competitors outranked</span>
+              </div>
+            </div>
+            <p class="cs-body-text">A professional services business had lost Google visibility entirely following a domain issue — with 70+ established competitors already ranking for the same high-intent search terms. Through a structured technical SEO recovery and content repositioning strategy, we restored domain authority and achieved top 3 rankings within 2.5 months.</p>
+            <p class="cs-relevance">Directly applicable to UK legal firms, energy consultancies, and advisory businesses competing for search visibility in their practice areas.</p>
+            <a href="#book" class="cs-link">Read Case Study →</a>
+          </div>
+        </article>
+
+        <!-- Case Study 2 -->
+        <article class="cs-card" data-reveal>
+          <!-- IMAGE: Lead generation case study illustration, 1160×400px, pipeline/funnel theme -->
+          <div class="cs-cover">
+            <svg class="cs-cover-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+            </svg>
+          </div>
+          <div class="cs-body">
+            <div class="cs-tags">
+              <span class="cs-cat-badge">Lead Generation</span>
+              <span class="cs-industry-tag">Applicable: Consulting · Legal</span>
+            </div>
+            <h3 class="cs-title">Predictable Lead Flow at a Defined Cost Per Qualified Enquiry</h3>
+            <div class="cs-metrics">
+              <div class="cs-metric">
+                <span class="cs-metric-value">CPL</span>
+                <span class="cs-metric-label">Consistent cost per lead</span>
+              </div>
+              <div class="cs-metric">
+                <span class="cs-metric-value">5-stage</span>
+                <span class="cs-metric-label">Automated nurture</span>
+              </div>
+              <div class="cs-metric">
+                <span class="cs-metric-value">90 days</span>
+                <span class="cs-metric-label">To optimised system</span>
+              </div>
+            </div>
+            <p class="cs-body-text">A premium service business needed to move away from referral dependency and build a repeatable, measurable lead generation system. We built the full infrastructure — paid campaign, landing page, lead capture, and automated nurture — delivering a consistent pipeline at a defined cost per qualified enquiry.</p>
+            <p class="cs-relevance">Directly applicable to UK consulting firms and law practices looking to build a digital new-business channel alongside existing referral networks.</p>
+            <a href="#book" class="cs-link">Read Case Study →</a>
+          </div>
+        </article>
+
+        <!-- Case Study 3 -->
+        <article class="cs-card" data-reveal>
+          <!-- IMAGE: Brand authority case study illustration, 1160×400px, brand/identity theme -->
+          <div class="cs-cover">
+            <svg class="cs-cover-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+          </div>
+          <div class="cs-body">
+            <div class="cs-tags">
+              <span class="cs-cat-badge">PR &amp; Branding</span>
+              <span class="cs-industry-tag">Applicable: Consulting · Legal · Energy</span>
+            </div>
+            <h3 class="cs-title">Personal Brand Authority That Converted Visibility Into Inbound Enquiries</h3>
+            <div class="cs-metrics">
+              <div class="cs-metric">
+                <span class="cs-metric-value">+340%</span>
+                <span class="cs-metric-label">Organic profile visibility</span>
+              </div>
+              <div class="cs-metric">
+                <span class="cs-metric-value">Auto</span>
+                <span class="cs-metric-label">Lead qualification</span>
+              </div>
+              <div class="cs-metric">
+                <span class="cs-metric-value">3mo</span>
+                <span class="cs-metric-label">Brand-to-enquiry live</span>
+              </div>
+            </div>
+            <p class="cs-body-text">A specialist practitioner needed to translate genuine expertise into visible online authority — and convert that visibility into consistent inbound enquiries. We built the personal brand strategy, content system, and chat automation that turned their profile into a lead generation asset.</p>
+            <p class="cs-relevance">Directly applicable to UK consulting partners, senior legal professionals, and energy sector specialists building personal brand authority.</p>
+            <a href="#book" class="cs-link">Read Case Study →</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- =============================================
+         SECTION 8: WHY DIGITAL DHINDORA
+    ============================================= -->
+    <section class="why-section" aria-label="Why work with us">
+      <div class="section-head-wrap" data-reveal>
+        <span class="eyebrow">Why Work With Us</span>
+        <h2 class="display-md">An Award-Winning Team. A No-Nonsense Approach.</h2>
+        <p class="body-md section-subhead">
+          We've been recognised as the Best Performance Marketing &amp; SEO Agency at the Global Digital Marketing Awards 2026. But awards don't pay your invoices. Here's what actually matters.
+        </p>
+      </div>
+      <div class="value-grid">
+
+        <div class="value-card" data-reveal>
+          <svg class="value-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+          <h3>Sector-Specific Strategy</h3>
+          <p>We don't apply generic marketing templates to regulated sectors. Every strategy is built around how energy, legal, and consulting buyers actually make decisions.</p>
+        </div>
+
+        <div class="value-card" data-reveal>
+          <svg class="value-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+          </svg>
+          <h3>GDPR-Compliant Delivery</h3>
+          <p>All campaigns, data capture, and automation workflows are built to UK GDPR standards — essential for legal firms and data-sensitive sectors.</p>
+        </div>
+
+        <div class="value-card" data-reveal>
+          <svg class="value-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+            <polyline points="16 7 22 7 22 13"/>
+          </svg>
+          <h3>Measurable From Day One</h3>
+          <p>We agree KPIs before any work begins. Every monthly report is in plain language: what happened, what it cost, what it produced, what's next.</p>
+        </div>
+
+        <div class="value-card" data-reveal>
+          <svg class="value-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="20 12 20 22 4 22 4 12"/>
+            <rect x="2" y="7" width="20" height="5"/>
+            <line x1="12" y1="22" x2="12" y2="7"/>
+            <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/>
+            <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/>
+          </svg>
+          <h3>Full Asset Ownership</h3>
+          <p>Every campaign account, content piece, and creative asset we build belongs to you. Always. We don't hold your data or accounts hostage.</p>
+        </div>
+
+        <div class="value-card" data-reveal>
+          <svg class="value-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+          <h3>No Lock-In Beyond 3 Months</h3>
+          <p>Our initial engagement is 3 months. If you're not seeing meaningful progress, we don't expect you to stay. Most clients don't leave because the results justify it.</p>
+        </div>
+
+        <div class="value-card" data-reveal>
+          <svg class="value-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.69h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.76-.76a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          <h3>Response Within 2 Business Hours (UK Hours)</h3>
+          <p>Your account manager is reachable during UK business hours. Not 24 hours later. Not via a ticketing system.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =============================================
+         SECTION 9: HOW WE WORK
+    ============================================= -->
+    <section class="process-section" id="process" aria-label="Our process">
+      <div class="section-head-wrap" data-reveal>
+        <span class="eyebrow">Our Process</span>
+        <h2 class="display-md">From First Call to First Result in Six Weeks.</h2>
+      </div>
+      <div class="process-steps">
+
+        <div class="process-step" data-reveal>
+          <div class="step-num-wrap" aria-hidden="true">
+            <span class="step-num">01</span>
+          </div>
+          <div class="step-timing">Week 1</div>
+          <h3 class="step-title">Discovery</h3>
+          <p class="step-desc">We audit your current digital presence, ad accounts, competitor rankings, and sector landscape. You complete a short onboarding questionnaire. We do the rest.</p>
+          <p class="step-output">Output: Growth opportunity map + confirmed KPIs</p>
+        </div>
+
+        <div class="process-step" data-reveal>
+          <div class="step-num-wrap" aria-hidden="true">
+            <span class="step-num">02</span>
+          </div>
+          <div class="step-timing">Week 2</div>
+          <h3 class="step-title">Strategy</h3>
+          <p class="step-desc">We build your 90-day custom growth roadmap — channels, messaging, budget allocation, and campaign sequencing — and walk you through it on a live call.</p>
+          <p class="step-output">Output: 90-day strategy document + campaign calendar</p>
+        </div>
+
+        <div class="process-step" data-reveal>
+          <div class="step-num-wrap" aria-hidden="true">
+            <span class="step-num">03</span>
+          </div>
+          <div class="step-timing">Weeks 3–4</div>
+          <h3 class="step-title">Build &amp; Launch</h3>
+          <p class="step-desc">Campaigns go live. Content is published. Automation workflows are activated. You get access to a live performance dashboard.</p>
+          <p class="step-output">Output: Active campaigns, tracking live, dashboard shared</p>
+        </div>
+
+        <div class="process-step" data-reveal>
+          <div class="step-num-wrap" aria-hidden="true">
+            <span class="step-num">04</span>
+          </div>
+          <div class="step-timing">Month 2 onwards</div>
+          <h3 class="step-title">Optimise &amp; Report</h3>
+          <p class="step-desc">Weekly optimisation. Monthly plain-language performance report. Quarterly strategy review. You always know what's working, what isn't, and what's changing.</p>
+          <p class="step-output">Output: Monthly report + ongoing optimisation</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =============================================
+         SECTION 10: LEAD MAGNET / FREE AUDIT
+    ============================================= -->
+    <section class="lead-magnet-section" aria-label="Free consultation offer">
+      <div class="lead-magnet-inner" data-reveal>
+        <span class="eyebrow eyebrow--white">Free Offer</span>
+        <h2 class="display-md">Get a Free 15-Point Digital Marketing Audit for Your UK Business.</h2>
+        <p class="lead-magnet-body">
+          In your free consultation, we'll review your current website, search rankings, paid campaigns (if any), and online positioning — and give you a prioritised list of what to fix first. No charge. No obligation. No aggressive follow-up.
+        </p>
+        <div class="lead-magnet-checks">
+          <span class="lead-magnet-check">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Delivered within 48 hours of your call
+          </span>
+          <span class="lead-magnet-check">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Specific to your sector and competitors
+          </span>
+          <span class="lead-magnet-check">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Yours to keep, even if you don't work with us
+          </span>
+        </div>
+        <a href="https://bookings.cloud.microsoft/bookwithme/user/17e344e0f2e04fbebb7defc2a87bdced%40digitaldhindora.com/meetingtype/PpbvsN0WzkKJuHHlzf_26g2?anonymous&ismsaljsauthenabled" class="btn-white" target="_blank" rel="noopener" id="magnet-calendly-cta">
+          Book My Free Consultation →
+        </a>
+        <p class="lead-magnet-sub">Usually available within 2 business days · 30-minute video call · UK business hours</p>
+      </div>
+    </section>
+
+    <!-- =============================================
+         SECTION 11: SOCIAL PROOF / TESTIMONIALS
+    ============================================= -->
+    <section class="social-proof-section" aria-label="Awards and testimonials">
+      <div class="section-head-wrap" data-reveal>
+        <span class="eyebrow">Recognition &amp; Trust</span>
+        <h2 class="display-md">Recognised by the Industry. Trusted by Growing Businesses.</h2>
+      </div>
+
+      <div class="awards-row">
+        <div class="award-card" data-reveal>
+          <svg class="award-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="8" r="7"/>
+            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+          </svg>
+          <div class="award-info">
+            <p class="award-org">Global Digital Marketing Awards 2026</p>
+            <h3 class="award-category">Best Performance Marketing &amp; SEO Agency</h3>
+            <p class="award-desc">Recognised across 50+ countries for consistent, measurable, and scalable client results.</p>
+            <a href="https://digitaldhindora.com/awards.html" class="award-link" rel="noopener">→ View award details</a>
+          </div>
+        </div>
+
+        <div class="award-card" data-reveal>
+          <svg class="award-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+          <div class="award-info">
+            <p class="award-org">World Digital Marketing Congress</p>
+            <h3 class="award-category">Most Admired Digital Marketer</h3>
+            <!-- IMAGE: founder — Shravani Bhalerao headshot, circular crop, ~60×60px -->
+            <p class="award-recipient">Shravani Bhalerao, Founder — Digital Dhindora</p>
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+              <div style="width:40px;height:40px;border-radius:50%;background:var(--color-accent-light);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:var(--color-accent);flex-shrink:0;">SB</div>
+              <p class="award-desc" style="margin:0;">Recognised for practitioner-led marketing leadership and a results-over-credentials philosophy.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card" data-reveal>
+          <div class="testimonial-stars" aria-label="5 out of 5 stars">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-quote">"We'd worked with two agencies before and had little to show for it. Digital Dhindora were different from the first conversation. They understood our sector, agreed clear KPIs upfront, and within three months our inbound enquiries had increased substantially. Straightforward to work with and the reporting is genuinely transparent."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background:var(--color-accent-light);color:var(--color-accent);font-weight:700;">MD</div>
+            <div>
+              <p class="testimonial-role" style="font-weight:600;color:var(--color-text-primary);font-size:14px;">Marketing Director</p>
+            </div>
+          </div>
+          <div style="margin-top:12px;"><span class="industry-badge">Energy</span></div>
+        </div>
+
+        <div class="testimonial-card" data-reveal>
+          <div class="testimonial-stars" aria-label="5 out of 5 stars">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-quote">"Legal marketing is a minefield and most agencies simply don't understand the compliance constraints. Digital Dhindora took the time to learn our practice areas and built a search strategy that has genuinely moved the needle. We're ranking for terms we'd long given up on and the quality of inbound enquiries is noticeably higher."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background:var(--color-accent-light);color:var(--color-accent);font-weight:700;">HM</div>
+            <div>
+              <p class="testimonial-role" style="font-weight:600;color:var(--color-text-primary);font-size:14px;">Head of Marketing</p>
+            </div>
+          </div>
+          <div style="margin-top:12px;"><span class="industry-badge">Legal</span></div>
+        </div>
+
+        <div class="testimonial-card" data-reveal>
+          <div class="testimonial-stars" aria-label="5 out of 5 stars">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-quote">"Our firm had relied almost entirely on referrals and our online presence reflected that. Digital Dhindora built a proper digital channel for us from scratch. The process was methodical and the results have been measurable from early on. We now have a consistent flow of enquiries from businesses we would not otherwise have reached."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background:var(--color-accent-light);color:var(--color-accent);font-weight:700;">GM</div>
+            <div>
+              <p class="testimonial-role" style="font-weight:600;color:var(--color-text-primary);font-size:14px;">Growth Manager</p>
+            </div>
+          </div>
+          <div style="margin-top:12px;"><span class="industry-badge">Consulting</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+         SECTION 12: BOOKING CTA
+    ============================================= -->
+    <section class="booking-section" id="book" aria-label="Book a consultation">
+      <div class="booking-inner" data-reveal>
+        <span class="eyebrow">Free Consultation</span>
+        <h2 class="display-lg">Ready to Find Out Exactly What's Holding Your UK Business Back Online?</h2>
+        <p class="booking-body">
+          Book a free 30-minute consultation with our team. We'll review your digital presence, identify the three highest-leverage opportunities for your business, and outline a realistic plan to capture them — with no obligation to proceed.
+        </p>
+        <ul class="booking-list" role="list">
+          <li><span class="booking-dot" aria-hidden="true"></span>A review of your website, rankings, and paid spend (if applicable)</li>
+          <li><span class="booking-dot" aria-hidden="true"></span>Competitor analysis in your sector</li>
+          <li><span class="booking-dot" aria-hidden="true"></span>A prioritised list of recommendations you can act on immediately</li>
+          <li><span class="booking-dot" aria-hidden="true"></span>No sales pressure, no follow-up barrage</li>
+        </ul>
+
+        <!-- CALENDLY BOOKING BUTTON -->
+        <!-- Replace CALENDLY_PLACEHOLDER with your actual Calendly link before launch -->
+        <!-- Example: https://calendly.com/digitaldhindora/uk-consultation -->
+        <a href="https://bookings.cloud.microsoft/bookwithme/user/17e344e0f2e04fbebb7defc2a87bdced%40digitaldhindora.com/meetingtype/PpbvsN0WzkKJuHHlzf_26g2?anonymous&ismsaljsauthenabled"
+           class="btn-primary btn-large"
+           target="_blank"
+           rel="noopener"
+           id="main-calendly-cta">
+          Book My Free Consultation →
+        </a>
+
+        <p class="btn-sub-text">Or reach us directly:</p>
+        <div class="contact-inline">
+          <!-- UK PHONE NUMBER — replace before launch -->
+          <a href="tel:+447584621276">+44 7584 621276</a>
+          <span>·</span>
+          <a href="mailto:info@digitaldhindora.com">info@digitaldhindora.com</a>
+          <span>·</span>
+          <a href="https://wa.me/918828289841" target="_blank" rel="noopener">WhatsApp →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =============================================
+       SECTION 13: FOOTER
+  ============================================= -->
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="footer-row-1">
+      <a href="https://digitaldhindora.com" class="footer-logo" aria-label="Digital Dhindora">
+        <span class="nav-logo-mark" aria-hidden="true"></span>
+        Digital Dhindora
+      </a>
+      <p class="footer-copyright">© 2026 Digital Dhindora</p>
+      <div class="footer-socials" role="list">
+        <a href="https://www.linkedin.com/company/digitaldhindora" target="_blank" rel="noopener" aria-label="Digital Dhindora on LinkedIn" role="listitem">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+            <rect x="2" y="9" width="4" height="12"/>
+            <circle cx="4" cy="4" r="2"/>
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/digitaldhindora" target="_blank" rel="noopener" aria-label="Digital Dhindora on Instagram" role="listitem">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+        </a>
+        <a href="https://www.facebook.com/digitaldhindora" target="_blank" rel="noopener" aria-label="Digital Dhindora on Facebook" role="listitem">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-row-2">
+      <span>All campaigns delivered in compliance with UK GDPR</span>
+      <span>·</span>
+      <a href="https://digitaldhindora.com/privacy" rel="noopener">Privacy Policy</a>
+      <span>·</span>
+      <a href="https://digitaldhindora.com" rel="noopener">Main Website</a>
+    </div>
+  </footer>
+
+  <!-- =============================================
+       FLOATING WHATSAPP BUTTON
+  ============================================= -->
+  <a href="https://wa.me/918828289841?text=Hi%2C%20I%27d%20like%20to%20discuss%20my%20UK%20marketing%20goals"
+     class="whatsapp-float"
+     id="whatsapp-float"
+     target="_blank"
+     rel="noopener"
+     aria-label="Chat with us on WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span class="whatsapp-label">Chat with us</span>
+    <span class="wa-dismiss" id="wa-dismiss" role="button" aria-label="Dismiss WhatsApp chat button" tabindex="0">×</span>
+  </a>
+
+  <!-- =============================================
+       MOBILE STICKY BAR
+  ============================================= -->
+  <div class="mobile-sticky-bar" id="mobile-sticky-bar" role="complementary" aria-label="Book a consultation">
+    <p>Free consultation for UK businesses</p>
+    <a href="https://bookings.cloud.microsoft/bookwithme/user/17e344e0f2e04fbebb7defc2a87bdced%40digitaldhindora.com/meetingtype/PpbvsN0WzkKJuHHlzf_26g2?anonymous&ismsaljsauthenabled" class="btn-primary btn-small" id="sticky-calendly-cta">Book Now</a>
+  </div>
+
+  <!-- =============================================
+       INLINE JAVASCRIPT
+  ============================================= -->
+  <script>
+    // =============================================
+    // GLOBAL CALENDLY URL — replace before launch
+    // =============================================
+    const CALENDLY_URL = 'https://bookings.cloud.microsoft/bookwithme/user/17e344e0f2e04fbebb7defc2a87bdced%40digitaldhindora.com/meetingtype/PpbvsN0WzkKJuHHlzf_26g2?anonymous&ismsaljsauthenabled';
+
+    document.addEventListener('DOMContentLoaded', function () {
+
+      // Set all Calendly hrefs from the global constant
+      document.querySelectorAll('[href="https://bookings.cloud.microsoft/bookwithme/user/17e344e0f2e04fbebb7defc2a87bdced%40digitaldhindora.com/meetingtype/PpbvsN0WzkKJuHHlzf_26g2?anonymous&ismsaljsauthenabled"]').forEach(function (el) {
+        el.href = CALENDLY_URL;
+      });
+
+      // =============================================
+      // 1. Sticky nav — .scrolled after 60px scroll
+      // =============================================
+      var nav = document.getElementById('site-nav');
+      function handleNavScroll() {
+        if (window.scrollY > 60) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+        }
+      }
+      window.addEventListener('scroll', handleNavScroll, { passive: true });
+      handleNavScroll();
+
+      // =============================================
+      // 2. Mobile menu — toggle overlay, trap focus
+      // =============================================
+      var hamburger = document.getElementById('nav-hamburger');
+      var overlay = document.getElementById('nav-overlay');
+      var closeBtn = document.getElementById('nav-close');
+      var overlayLinks = overlay.querySelectorAll('.nav-overlay-link');
+
+      function openMenu() {
+        overlay.classList.add('open');
+        hamburger.setAttribute('aria-expanded', 'true');
+        closeBtn.focus();
+        document.body.style.overflow = 'hidden';
+      }
+      function closeMenu() {
+        overlay.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.focus();
+        document.body.style.overflow = '';
+      }
+
+      hamburger.addEventListener('click', openMenu);
+      closeBtn.addEventListener('click', closeMenu);
+      overlayLinks.forEach(function (link) {
+        link.addEventListener('click', closeMenu);
+      });
+
+      // Trap focus in overlay
+      overlay.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeMenu();
+        if (e.key === 'Tab') {
+          var focusable = overlay.querySelectorAll('button, a, [tabindex]:not([tabindex="-1"])');
+          var first = focusable[0];
+          var last = focusable[focusable.length - 1];
+          if (e.shiftKey) {
+            if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+          } else {
+            if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+          }
+        }
+      });
+
+      // =============================================
+      // 3. Industry tabs
+      // =============================================
+      var tabBtns = document.querySelectorAll('.tab-btn');
+      var tabPanels = document.querySelectorAll('.tab-panel');
+
+      function activateTab(tab) {
+        var target = tab.dataset.tab;
+        tabBtns.forEach(function (btn) {
+          var isActive = btn.dataset.tab === target;
+          btn.classList.toggle('active', isActive);
+          btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        });
+        tabPanels.forEach(function (panel) {
+          panel.classList.toggle('active', panel.id === 'tab-' + target);
+        });
+      }
+
+      tabBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () { activateTab(btn); });
+        btn.addEventListener('keydown', function (e) {
+          if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+            var arr = Array.from(tabBtns);
+            var idx = arr.indexOf(btn);
+            var next = e.key === 'ArrowRight'
+              ? arr[(idx + 1) % arr.length]
+              : arr[(idx - 1 + arr.length) % arr.length];
+            next.click();
+            next.focus();
+          }
+        });
+      });
+
+      // Industry pills in hero scroll to industries and activate tab
+      document.querySelectorAll('.industry-pill[data-tab]').forEach(function (pill) {
+        pill.addEventListener('click', function (e) {
+          e.preventDefault();
+          var tabTarget = pill.dataset.tab;
+          document.querySelector('[data-tab="' + tabTarget + '"].tab-btn').click();
+          document.getElementById('industries').scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+
+      // =============================================
+      // 4. Service accordions
+      // =============================================
+      document.querySelectorAll('.accordion-trigger').forEach(function (trigger) {
+        trigger.addEventListener('click', function () {
+          var bodyId = trigger.getAttribute('aria-controls');
+          var body = document.getElementById(bodyId);
+          var isOpen = trigger.classList.contains('open');
+
+          // Close all in same accordion
+          var parentAccordion = trigger.closest('.accordion');
+          parentAccordion.querySelectorAll('.accordion-trigger').forEach(function (t) {
+            t.classList.remove('open');
+            t.setAttribute('aria-expanded', 'false');
+          });
+          parentAccordion.querySelectorAll('.accordion-body').forEach(function (b) {
+            b.classList.remove('open');
+          });
+
+          if (!isOpen) {
+            trigger.classList.add('open');
+            trigger.setAttribute('aria-expanded', 'true');
+            body.classList.add('open');
+          }
+        });
+      });
+
+      // =============================================
+      // 5. Counter animation (IntersectionObserver)
+      // =============================================
+      function easeOutQuart(t) {
+        return 1 - Math.pow(1 - t, 4);
+      }
+
+      function animateCounter(el) {
+        var target = parseInt(el.dataset.target, 10);
+        var suffix = el.dataset.suffix || '';
+        var prefix = el.dataset.prefix || '';
+        var duration = 1800;
+        var start = null;
+
+        function step(timestamp) {
+          if (!start) start = timestamp;
+          var elapsed = timestamp - start;
+          var progress = Math.min(elapsed / duration, 1);
+          var eased = easeOutQuart(progress);
+          var current = Math.round(eased * target);
+          el.textContent = prefix + current + suffix;
+          if (progress < 1) {
+            requestAnimationFrame(step);
+          } else {
+            el.textContent = prefix + target + suffix;
+          }
+        }
+        requestAnimationFrame(step);
+      }
+
+      var counterObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            animateCounter(entry.target);
+            counterObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      document.querySelectorAll('.stat-number[data-target]').forEach(function (el) {
+        counterObserver.observe(el);
+      });
+
+      // =============================================
+      // 6. Smooth scroll for anchor links
+      // =============================================
+      document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+        anchor.addEventListener('click', function (e) {
+          var target = document.querySelector(anchor.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+
+      // =============================================
+      // 7. WhatsApp float button
+      // =============================================
+      var waFloat = document.getElementById('whatsapp-float');
+      var waDismiss = document.getElementById('wa-dismiss');
+      var waDismissed = sessionStorage.getItem('wa_dismissed');
+
+      function showWA() {
+        if (!waDismissed) waFloat.classList.add('visible');
+      }
+
+      // Mobile: show immediately; desktop: delay 6s
+      if (window.innerWidth <= 768) {
+        showWA();
+      } else {
+        setTimeout(showWA, 6000);
+      }
+
+      if (waDismiss) {
+        waDismiss.addEventListener('click', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          waFloat.classList.remove('visible');
+          sessionStorage.setItem('wa_dismissed', '1');
+          waDismissed = '1';
+        });
+        waDismiss.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            waDismiss.click();
+          }
+        });
+      }
+
+      // =============================================
+      // 8. Mobile sticky bar (50% scroll depth)
+      // =============================================
+      var stickyBar = document.getElementById('mobile-sticky-bar');
+      var stickyShown = false;
+
+      function checkStickyBar() {
+        if (window.innerWidth > 768) return;
+        var scrollPct = (window.scrollY + window.innerHeight) / document.body.scrollHeight;
+        if (scrollPct > 0.5 && !stickyShown) {
+          stickyBar.classList.add('visible');
+          stickyShown = true;
+        }
+      }
+      window.addEventListener('scroll', checkStickyBar, { passive: true });
+
+      // =============================================
+      // 9. Scroll reveal (IntersectionObserver)
+      // =============================================
+      var revealObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+      document.querySelectorAll('[data-reveal]').forEach(function (el, i) {
+        // Stagger siblings
+        el.style.transitionDelay = (i % 6) * 0.07 + 's';
+        revealObserver.observe(el);
+      });
+
+      // =============================================
+      // 10. Active nav highlight on scroll
+      // =============================================
+      var navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+      var sections = [];
+      navAnchors.forEach(function (a) {
+        var sec = document.querySelector(a.getAttribute('href'));
+        if (sec) sections.push({ el: sec, link: a });
+      });
+
+      function highlightNav() {
+        var scrollY = window.scrollY + 120;
+        var active = null;
+        sections.forEach(function (s) {
+          if (s.el.offsetTop <= scrollY) active = s;
+        });
+        navAnchors.forEach(function (a) { a.style.color = ''; });
+        if (active) active.link.style.color = 'var(--color-accent)';
+      }
+      window.addEventListener('scroll', highlightNav, { passive: true });
+
+    }); // end DOMContentLoaded
+  </script>
+
+</body>
+</html>
